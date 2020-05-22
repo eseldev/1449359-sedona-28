@@ -25,44 +25,71 @@
   </header>
 
   <main>
-    <h1>Гостиницы Седоны</h1>
+    <h1 class="visually-hidden">Гостиницы Седоны</h1>
     <section>
-      <div class="background-blurred">
+      <div class="background-blurred"></div>
 
-        <h2>Фильтры гостиниц</h2>
+      <h2 class="visually-hidden">Фильтр гостиниц</h2>
 
-        <!-- Здесь будет раздел с фильтрами и сортировкой -->
+      <form action="https://echo.htmlacademy.ru" method="get">
 
-        <div>
-          <h3>Инфраструктура</h3>
+        <fieldset>
+          <legend>Инфраструктура:</legend>
           <ul>
-            <li>Бассейн</li>
-            <li>Парквока</li>
-            <li>Wi-Fi</li>
+            <li>
+              <label>
+                <input type="checkbox" name="pool" checked>Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="parking">Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="wi-fi">Wi-Fi
+              </label>
+            </li>
           </ul>
-        </div>
-
-        <div>
-          <h3>Тип жилья</h3>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
           <ul>
-            <li>Гостиница</li>
-            <li>Мотель</li>
-            <li>Апартаменты</li>
+            <li>
+              <label>
+                <input type="checkbox" name="hotel" checked>Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="motel" checked>Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="apartments" checked>Апартаменты
+              </label>
+            </li>
           </ul>
-        </div>
+        </fieldset>
 
         <div>
-          <h3>Стоимость в сутки (Р)</h3>
-          <span>От 0</span>
-          <span>До 3000</span>
+          <label for="price-range">Стоимость в сутки (Р)</label>
+          <p>
+            <span>От 0</span>
+            <span>До 3000</span>
+          </p>
+          <input type="range" name="price" id="price-range" min="0" max="3000" step="100" value="1500" id="price-range">
         </div>
 
         <button class="submit-button" type="submit">Показать</button>
 
-      </div>
+      </form>
+
     </section>
     <section>
-      <h2>Список гостиниц</h2>
+      <h2 class="visually-hidden">Список гостиниц</h2>
 
       <div class="classification">
         <p>Найдено:3</p>
@@ -124,16 +151,16 @@
 
   <footer>
     <section>
-      <h2>Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <span>#visitsedona</span>
       <a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
     </section>
     <section>
-      <h2>Давайте дружить!</h2>
+      <h2 class="visually-hidden">Давайте дружить!</h2>
       <ul>
-        <li><a class="twitter" href="#">Twitter</a></li>
-        <li><a class="facebook" href="#">Facebook</a></li>
-        <li><a class="youtube" href="#">YouTube</a></li>
+        <li><a class="twitter" href="#" aria-label="Twitter">Twitter</a></li>
+        <li><a class="facebook" href="#" aria-label="Facebook">Facebook</a></li>
+        <li><a class="youtube" href="#" aria-label="YouTube">YouTube</a></li>
       </ul>
     </section>
     <section>
