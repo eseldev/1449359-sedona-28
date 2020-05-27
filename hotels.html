@@ -31,65 +31,66 @@
     <h1 class="visually-hidden">Гостиницы Седоны</h1>
     <section>
       <div class="filter-container">
-      <div class="background-blurred"></div>
+        <div class="background-blurred"></div>
 
-      <h2 class="visually-hidden">Фильтр гостиниц</h2>
+        <h2 class="visually-hidden">Фильтр гостиниц</h2>
 
-      <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
 
-        <fieldset>
-          <legend>Инфраструктура:</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="checkbox" name="pool" checked>Бассейн
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="parking">Парковка
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="wi-fi">Wi-Fi
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Тип жилья:</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="checkbox" name="hotel" checked>Гостиница
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="motel" checked>Мотель
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="apartments" checked>Апартаменты
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="facilities">
+            <legend>Инфраструктура:</legend>
+            <ul class="checkbox-list">
+              <li>
+                <label>
+                  <input type="checkbox" name="pool" checked>Бассейн
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="parking">Парковка
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="wi-fi">Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="accomodation-type">
+            <legend>Тип жилья:</legend>
+            <ul class="checkbox-list">
+              <li>
+                <label>
+                  <input type="checkbox" name="hotel" checked>Гостиница
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="motel" checked>Мотель
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="apartments" checked>Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <div>
-          <label for="price-range">Стоимость в сутки (Р):</label>
-          <p>
-            <span>От 0</span>
-            <span>До 3000</span>
-          </p>
-          <input type="range" name="price" id="price-range" min="0" max="3000" step="100" value="1500" id="price-range">
-        </div>
+          <div>
+            <label for="price-range">Стоимость в сутки (Р):</label>
+            <p>
+              <span>От 0</span>
+              <span>До 3000</span>
+            </p>
+            <input type="range" name="price" id="price-range" min="0" max="3000" step="100" value="1500"
+              id="price-range">
+          </div>
 
-        <button class="submit-button" type="submit">Показать</button>
+          <button class="submit-button" type="submit">Показать</button>
 
-      </form>
+        </form>
 
       </div>
 
@@ -109,9 +110,9 @@
         <a href="#" class="arrow down" aria-label="По убыванию">Вниз</a>
       </div>
 
-      <ul>
+      <ul class="hotels-list">
         <li class="hotels-list-item">
-          <a href="#">
+          <a class="hotel-name" href="#">
             <h3>Amara Resort & Spa</h3>
           </a>
           <a class="hotel-image"><img src="img/amara.jpg" width="135" height="90"

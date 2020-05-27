@@ -110,25 +110,25 @@
 
       <div class="search-popup">
         <form action="https://echo.htmlacademy.ru" method="get">
-          <p class="arrival">
+          <p class="date arrival">
             <label>Дата заезда:
               <input type="text" name="arrival-date" value="24 апреля 2017" required>
             </label>
             <button class="calendar" type="button" aria-label="открыть календарь"></button>
           </p>
-          <p class="departure">
+          <p class="date departure">
             <label>Дата выезда:
               <input type="text" name="departure-date" value="4 июля 2017" required>
             </label>
             <button class="calendar" type="button" aria-label="открыть календарь"></button>
           </p>
-          <div>
+          <div class="quantity adults">
             <label for="adults-num">Взрослые:</label>
             <button type="button" aria-label="уменьшить">-</button>
             <input type="number" name="adults" id="adults-num" min="1" value="2" required>
             <button type="button" aria-label="увеличить">+</button>
           </div>
-          <div>
+          <div class="quantity kids">
             <label for="kids-num">Дети:</label>
             <button type="button" aria-label="уменьшить">-</button>
             <input type="number" name="kids" id="kids-num" min="0" value="0">

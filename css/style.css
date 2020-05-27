@@ -1,6 +1,7 @@
 :root {
   --basic-white: #FFFFFF;
   --basic-black: #000000;
+  --narrow-black: #333333;
 
   --basic-blue: #81B3D2;
   --logo-blue: #81B3D3;
@@ -21,6 +22,7 @@
   --arrow-grey: #CACACA;
   --icon-grey: #A9A9A9;
   --checkbox-dark-grey: #6A6A6A;
+  --rating-grey: #666666;
 
   --html-grey: #BDBBBC;
   --html-black: #231F20;
@@ -47,16 +49,6 @@ img {
   height: auto;
 }
 
-ul {
-  list-style: none;
-}
-
-h3 {
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -79,6 +71,10 @@ h3 {
 .welcome {
   display: block;
   margin: auto;
+}
+
+.site-navigation {
+  list-style: none;
 }
 
 .site-navigation a {
@@ -107,11 +103,22 @@ h3 {
 .reasons-list {
   padding: inherit;
   margin: inherit;
+  list-style: none;
+}
+
+.reason h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
 }
 
 .we-need-more {
   font-size: 21px;
   font-weight: bold;
+}
+
+.we-need-more+p {
+  color: var(--narrow-black);
 }
 
 .reason {
@@ -123,11 +130,32 @@ h3 {
   background-color: var(--reasons-grey);
 }
 
+.reason-bottom h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.hint-list {
+  list-style: none;
+}
+
+.hint-list p {
+  color: var(--narrow-black);
+}
+
+
 .lodging {
   background-image: url(../img/icon-1.svg);
   width: 75px;
   height: 72px;
   display: inline-block;
+}
+
+.lodging+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
 }
 
 .food {
@@ -137,11 +165,27 @@ h3 {
   display: inline-block;
 }
 
+.food+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
 .gifts {
   background-image: url(../img/icon-2.svg);
   width: 64px;
   height: 77px;
   display: inline-block;
+}
+
+.gifts+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.reason-bottom p {
+  color: var(--narrow-black);
 }
 
 .hotel-search {
@@ -151,6 +195,10 @@ h3 {
 .interested {
   font-size: 30px;
   font-weight: bold;
+}
+
+.interested+p {
+  color: var(--narrow-black);
 }
 
 .open-button {
@@ -189,14 +237,11 @@ h3 {
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-input {
+.date input[type="text"] {
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-input[type="text"] {
   width: 346px;
   height: 38px;
   background-color: var(--background-light-grey);
@@ -204,16 +249,20 @@ input[type="text"] {
   padding-left: 13px;
 }
 
-input[type="text"]:hover {
+.date input[type="text"]:hover {
   background-color: var(--hover-light-grey);
 }
 
-input[type="text"]:focus {
+.date input[type="text"]:focus {
   background-color: transparent;
   border: 2px solid var(--border-grey);
 }
 
-input[type="number"] {
+.quantity input[type="number"] {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
   width: 114px;
   height: 38px;
   background-color: var(--background-light-grey);
@@ -271,12 +320,16 @@ input[type="number"] {
 }
 
 .footer-contacts {
-  font-size: 21;
+  font-size: 21px;
   font-weight: bold;
 }
 
 .footer-phone {
   color: var(--basic-black);
+}
+
+.footer-social ul {
+  list-style: none;
 }
 
 .social-icon {
@@ -331,7 +384,12 @@ input[type="number"] {
   outline-width: 3px;
 }
 
-legend {
+.checkbox-list {
+  list-style: none;
+}
+
+.facilities legend,
+.accomodation-type legend {
   font-size: 16px;
   font-weight: bold;
 }
@@ -374,11 +432,15 @@ label[for="price-range"] {
   line-height: 18px;
 }
 
+.classification-container ul {
+  list-style: none;
+}
+
 .sort-item {
   font-size: 12px;
   line-height: 18px;
   color: var(--opacity-black);
-  border-bottom: 1px dashed var(--basic-blue);
+  border-bottom: 1px dotted var(--basic-blue);
 }
 
 .sort-item:hover,
@@ -404,12 +466,20 @@ label[for="price-range"] {
   color: var(--basic-blue);
 }
 
-a h3 {
+.hotel-name h3 {
   color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.hotels-list {
+  list-style: none;
 }
 
 .hotels-list-item p {
   line-height: 21px;
+  color: var(--narrow-black);
 }
 
 .hotel-button {
@@ -456,11 +526,11 @@ a h3 {
 }
 
 .rating {
+    color: var(--rating-grey);
     background-color: var(--background-light-grey);
-    width: 83px;
-    height: 21px;
-    font-size: inherit;
-    line-height: inherit;
-    display: inline-block;
+  width: 83px;
+  height: 21px;
+  font-size: inherit;
+  line-height: inherit;
+  display: inline-block;
 }
-
