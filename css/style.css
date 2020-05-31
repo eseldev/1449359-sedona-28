@@ -113,7 +113,8 @@ img {
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0 72px;
+  padding: 0;
+  padding-left: 73px;
   width: 100%;
   height: 56px;
 }
@@ -137,16 +138,16 @@ img {
   color: var(--basic-brown);
 }
 
-.nav-info {
+.site-navigation li {
   width: 228px;
 }
 
-.nav-foto {
-  width: 516px;
+.site-navigation li:nth-child(2) {
+  margin-right: auto;
 }
 
-.nav-map {
-  width: 232px;
+..site-navigation li:nth-child(3) {
+  margin-left: auto;
 }
 
 .advantages {
@@ -321,7 +322,7 @@ img {
 }
 
 .date.arrival {
-padding-top: 55px;
+  padding-top: 55px;
 }
 
 .date.departure {
@@ -419,7 +420,6 @@ padding-top: 55px;
 .footer-wrapper {
   display: flex;
   min-height: 120px;
-  justify-content: space-around;
 }
 
 .footer-contacts {
@@ -428,14 +428,37 @@ padding-top: 55px;
   margin: 0;
 }
 
+.footer-contacts p {
+  margin-top: 23px;
+  margin-left: 117px;
+  margin-bottom: 9px;
+}
+
 .footer-phone {
+  margin-top: 0;
+  margin-right: 156px;
+  margin-bottom: 36px;
+  margin-left: 117px;
+}
+
+.footer-phone a {
   color: var(--basic-black);
 }
 
-.footer-social ul {
+.social-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.social-list li {
+  display: inline;
+}
+
+.social-list li:last-child {
+  margin-right: 228px;
 }
 
 .social-icon {
@@ -471,16 +494,29 @@ padding-top: 55px;
   background-color: var(--active-blue);
 }
 
-/* HOTELS */
-
-.background-blurred {
-  background-image: url(../img/background_blurred.jpg);
-  width: 1200px;
-  height: 217px;
+.footer-logo :first-child {
+  margin-left: 0;
+  margin-top: 49px;
+  margin-right: 10px;
+  margin-bottom: 45px;
+  display: inline-block;
 }
 
+.footer-logo :last-child {
+  width: 114px;
+  height: 40px;
+  margin: 0;
+  display: inline-block;
+}
+
+/* HOTELS */
+
 .filter-container {
+  background-image: url(../img/background_blurred.jpg);
   background-color: var(--basic-blue);
+  width: 1200px;
+  min-height: 217px;
+  display: flex;
   color: var(--basic-white);
   line-height: 21px;
 }
@@ -490,8 +526,37 @@ padding-top: 55px;
   outline-width: 3px;
 }
 
+
+.facilities {
+  width: 300px;
+  min-height: 217px;
+  padding: 0;
+  padding-left: 72px;
+}
+
+.accomodation-type {
+  width: 300px;
+  min-height: 217px;
+  padding: 0;
+}
+
+.price-range-container {
+  min-width: 317px;
+  min-height: 217px;
+}
+
 .checkbox-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-list li {
+  padding-bottom: 25px;
+}
+
+.checkbox-list li:first-child {
+  padding-top: 24px;
 }
 
 .facilities legend,
@@ -527,19 +592,46 @@ label[for="price-range"] {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  padding-left: 73px;
 }
 
 .classification-container {
   border-bottom: 1px solid var(--border-grey);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 86px;
 }
 
 .picking {
   font-size: 12px;
   line-height: 18px;
+  padding-left: 46px;
 }
 
-.classification-container ul {
+.sort-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 503px;
+
+}
+
+.sort-list li {
+  display: inline;
+  margin: auto;
+}
+
+.sort-list li:first-child {
+  padding-left: 46px;
+}
+
+.sort-list li:nth-child(2) {
+  padding-left: 32px;
+}
+
+.sort-list li:last-child {
+  padding-left: 33px;
 }
 
 .sort-item {
@@ -559,6 +651,7 @@ label[for="price-range"] {
   border: none;
 }
 
+
 .arrow {
   color: var(--arrow-grey);
 }
@@ -577,15 +670,40 @@ label[for="price-range"] {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
+  margin: 0;
+  padding-bottom: 7px;
 }
 
 .hotels-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-list-item {
+  display: flex;
+  width: 1200px;
+  min-height: 150px;
+  padding-left: 73px;
+  padding-right: 73px;
+
+}
+
+.hotels-list-item div {
+  align-self: center;
 }
 
 .hotels-list-item p {
   line-height: 21px;
   color: var(--narrow-black);
+  margin: 0;
+}
+
+.hotel-image {
+  width: 135px;
+  height: 90px;
+  align-self: center;
+  margin-right: 29px;
 }
 
 .hotel-button {
@@ -601,6 +719,7 @@ label[for="price-range"] {
   width: 110px;
   height: 27px;
   background-color: var(--basic-blue);
+  margin-right: 6px;
 }
 
 .hotel-button.more:hover,
@@ -618,6 +737,7 @@ label[for="price-range"] {
   width: 142px;
   height: 27px;
   background-color: var(--basic-brown);
+  margin-right: 522px;
 }
 
 .hotel-button.book:hover,
@@ -638,5 +758,4 @@ label[for="price-range"] {
   height: 21px;
   font-size: inherit;
   line-height: inherit;
-  display: inline-block;
 }
