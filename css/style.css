@@ -541,8 +541,9 @@ img {
 }
 
 .price-range-container {
-  min-width: 317px;
+  width: 317px;
   min-height: 217px;
+  margin-left: auto;
 }
 
 .checkbox-list {
@@ -682,16 +683,13 @@ label[for="price-range"] {
 
 .hotels-list-item {
   display: flex;
+  align-items: center;
   width: 1200px;
   min-height: 150px;
   padding-left: 73px;
   padding-right: 73px;
-
 }
 
-.hotels-list-item div {
-  align-self: center;
-}
 
 .hotels-list-item p {
   line-height: 21px;
@@ -702,7 +700,6 @@ label[for="price-range"] {
 .hotel-image {
   width: 135px;
   height: 90px;
-  align-self: center;
   margin-right: 29px;
 }
 
@@ -737,7 +734,7 @@ label[for="price-range"] {
   width: 142px;
   height: 27px;
   background-color: var(--basic-brown);
-  margin-right: 522px;
+  /* margin-right: 522px; */
 }
 
 .hotel-button.book:hover,
@@ -758,4 +755,5 @@ label[for="price-range"] {
   height: 21px;
   font-size: inherit;
   line-height: inherit;
+  margin-left: auto;
 }
