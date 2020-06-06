@@ -57,7 +57,8 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -677,7 +678,7 @@ section.footer {
   background-image: url(../img/youtube.svg);
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 13px;
 }
 
 .social-icon:hover {
@@ -711,6 +712,15 @@ section.footer {
   vertical-align: middle;
 }
 
+.footer.logo :last-child:hover .academy-icon path,
+.footer.logo :last-child:focus .academy-icon path {
+  fill: var(--basic-blue);
+}
+
+.footer.logo :last-child:active .academy-icon path {
+  fill: var(--html-grey);
+}
+
 /* HOTELS */
 
 .filter-container {
@@ -721,51 +731,55 @@ section.footer {
   display: flex;
   color: var(--basic-white);
   line-height: 21px;
+  padding-top: 25px;
+  padding-left: 71px;
+  padding-right: 71px;
 }
 
-.filter-container :focus {
-  outline-color: var(--basic-black);
-  outline-width: 3px;
-}
-
-
-.facilities {
-  width: 300px;
-  min-height: 217px;
+.filter-container fieldset {
+  width: 250px;
   padding: 0;
-  padding-left: 72px;
+  border: none;
 }
 
-.accomodation-type {
-  width: 300px;
-  min-height: 217px;
-  padding: 0;
-}
-
-.price-range-container {
-  width: 317px;
-  min-height: 217px;
-  margin-left: auto;
+.facilities legend,
+.accomodation legend {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .checkbox-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 40px;
 }
 
 .checkbox-list li {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
-.checkbox-list li:first-child {
-  padding-top: 24px;
+.checkbox-list label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
-.facilities legend,
-.accomodation-type legend {
-  font-size: 16px;
-  font-weight: bold;
+
+.filter-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  background-image: url(../img/checkbox-off.svg);
+  width: 23px;
+  height: 23px;
+}
+
+.price-range-container {
+  width: 317px;
+  margin-left: auto;
 }
 
 label[for="price-range"] {

@@ -34,45 +34,45 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <div class="filter-container">
 
-            <div class="fieldset-wrapper">
+            <div>
               <fieldset class="facilities">
                 <legend>Инфраструктура:</legend>
                 <ul class="checkbox-list">
                   <li>
                     <label>
-                      <input type="checkbox" name="pool" checked>Бассейн
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" checked>Бассейн
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="checkbox" name="parking">Парковка
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="parking">Парковка
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="checkbox" name="wi-fi">Wi-Fi
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="wi-fi">Wi-Fi
                     </label>
                   </li>
                 </ul>
               </fieldset>
             </div>
-            <div class="fieldset-wrapper">
-              <fieldset class="accomodation-type">
+            <div>
+              <fieldset class="accomodation">
                 <legend>Тип жилья:</legend>
                 <ul class="checkbox-list">
                   <li>
                     <label>
-                      <input type="checkbox" name="hotel" checked>Гостиница
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="hotel" checked>Гостиница
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="checkbox" name="motel" checked>Мотель
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="motel" checked>Мотель
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="checkbox" name="apartments" checked>Апартаменты
+                      <input class="visually-hidden filter-checkbox" type="checkbox" name="apartments" checked>Апартаменты
                     </label>
                   </li>
                 </ul>
@@ -170,16 +170,13 @@
   <footer class="main-footer">
     <div class="footer-wrapper">
 
-      <section class="footer contacts">
-        <div>
+      <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p>#visitsedona</p>
-          <p class="footer-phone"><a href="tel:+74956660166">Тел: +7(495) 666-01-66</a></p>
-        </div>
+          <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
       </section>
 
       <section class="footer social">
-        <div>
           <h2 class="visually-hidden">Давайте дружить!</h2>
           <ul class="social-list">
             <li>
@@ -198,16 +195,13 @@
               </a>
             </li>
           </ul>
-        </div>
       </section>
 
       <section class="footer logo">
-        <div>
           <p>Website by</p>
           <p><a href="https://htmlacademy.ru/intensive/htmlcss" title="Логотип HTML Academy">
               <img src="img/logo-htmlacademy.svg" width="114" height="40" alt="Лого HTML Academy">
             </a></p>
-        </div>
       </section>
 
     </div>
