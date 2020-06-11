@@ -376,6 +376,7 @@ input[type="checkbox"].visually-hidden {
   width: 568px;
   min-height: 86px;
   border: none;
+  padding: 10px;
 }
 
 .open-button:hover,
@@ -391,10 +392,12 @@ input[type="checkbox"].visually-hidden {
 
 .map {
   background-image: url(../img/map.jpg);
+  background-size: cover;  
   width: 1200px;
-  height: 594px;
+  min-height: 594px;
   display: block;
   position: relative;
+  padding-bottom: 150px;
 }
 
 .search-popup {
@@ -434,6 +437,7 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--background-light-grey);
   border-color: transparent;
   padding-left: 10px;
+  padding-right: 40px;
 }
 
 .date input[type="text"]::placeholder {
@@ -528,6 +532,7 @@ div.quantity {
   background-color: var(--background-light-grey);
   border: none;
   text-align: center;
+  padding: 0 38px;
 }
 
 button.minus {
@@ -651,17 +656,17 @@ section.footer {
 }
 
 .social-list {
+  display: flex;
   list-style: none;
   padding: 0;
-  padding-top: 7px;
+  padding-left: 6px;
   margin: 0;
 }
 
 .social-list li {
-  display: inline-block;
   width: 46px;
   height: 48px;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 .social-icon {
@@ -1074,6 +1079,7 @@ div.arrows {
 
 .hotel-info {
   padding-top: 26px;
+  max-width: 700px;
 }
 
 .hotel-name h3 {
