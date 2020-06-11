@@ -82,11 +82,12 @@
                 <div class="price-range-display">
                   <div>
                     <label for="min-price-field" class="min-price">от </label>
-                    <input type="number" name="min-price" id="min-price-field" min="0" max="3000" value="0">
+                    <input type="text" name="min-price" id="min-price-field" min="0" max="3000" value="0"
+                    pattern="[0-9]{1,4}">
                   </div>
                   <div>
                     <label for="max-price-field" class="max-price">до </label>
-                    <input type="number" name="max-price" id="max-price-field" max="3000" value="3000">
+                    <input type="text" name="max-price" id="max-price-field" min="100" max="3000" value="3000" pattern="[0-9]{1,4}">
                   </div>
                 </div>
                 <div class="range-controls">
@@ -113,7 +114,7 @@
       <div class="found">Найдено: 3</div>
       <div class="picking">Сортировка:</div>
       <ul class="sort-list">
-        <li><a class="sort-item byprice" href="#">По цене</a></li>
+        <li><a class="sort-item byprice current" href="#">По цене</a></li>
         <li><a class="sort-item bytype" href="#">По типу</a></li>
         <li><a class="sort-item byrating" href="#">По рейтингу</a></li>
       </ul>
@@ -122,7 +123,7 @@
           <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA" /></svg>
         </a>
-        <a href="#" class="arrow down" aria-label="По убыванию">
+        <a href="#" class="arrow down current" aria-label="По убыванию">
           <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA" /></svg>
         </a>
@@ -138,15 +139,15 @@
             <h3>Amara Resort & Spa</h3>
           </a>
           <p>
-            <span>Гостиница</span>
-            <span>от 4000 р.</span>
+            <span class="hotel-type">Гостиница</span>
+            <span class="hotel-price">от 4000 р.</span>
           </p>
           <div class="hotel-button">
             <a class="hotel-button more" href="#">Подробнее</a>
             <a class="hotel-button book" href="#">Забронировать</a>
           </div>
         </div>
-        <div class="rating amara"><span>рейтинг: 8,5</span></div>
+        <div class="rating four-stars"><span>рейтинг: 8,5</span></div>
       </li>
       <li class="hotels-list-item">
         <a class="hotel-image"><img src="img/desert.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
@@ -156,15 +157,15 @@
             <h3>Desert Quail Inn</h3>
           </a>
           <p>
-            <span>Мотель</span>
-            <span>от 3000 р.</span>
+            <span class="hotel-type">Мотель</span>
+            <span class="hotel-price">от 3000 р.</span>
           </p>
           <div>
             <a class="hotel-button more" href="#">Подробнее</a>
             <a class="hotel-button book" href="#">Забронировать</a>
           </div>
         </div>
-        <div class="rating desert"><span>рейтинг: 8,9</span></div>
+        <div class="rating three-stars"><span>рейтинг: 8,9</span></div>
       </li>
       <li class="hotels-list-item">
         <a class="hotel-image"><img src="img/villas.jpg" width="135" height="90"
@@ -175,15 +176,15 @@
             <h3>Villas at Poco Diablo</h3>
           </a>
           <p>
-            <span>Апартаменты</span>
-            <span>от 2000 р.</span>
+            <span class="hotel-type">Апартаменты</span>
+            <span class="hotel-price">от 2000 р.</span>
           </p>
           <div>
             <a class="hotel-button more" href="#">Подробнее</a>
             <a class="hotel-button book" href="#">Забронировать</a>
           </div>
         </div>
-        <div class="rating villas"><span>рейтинг: 9,2</span></div>
+        <div class="rating two-stars"><span>рейтинг: 9,2</span></div>
       </li>
     </ul>
   </section>

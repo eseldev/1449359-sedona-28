@@ -119,6 +119,7 @@ input[type="checkbox"].visually-hidden {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -150,12 +151,12 @@ input[type="checkbox"].visually-hidden {
   width: 228px;
 }
 
-.site-navigation li:nth-child(3) {
+.site-navigation li:nth-child(4n+3) {
   margin-left: auto;
   text-align: right;
 }
 
-.site-navigation li:last-child {
+.site-navigation li:nth-child(4n) {
   text-align: right;
 }
 
@@ -166,6 +167,27 @@ input[type="checkbox"].visually-hidden {
 .advantages-header {
   min-height: 216px;
   padding-top: 42px;
+  padding-bottom: 50px;
+}
+
+.we-need-more {
+  width: 470px;
+  min-height: 80px;
+  margin: auto;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.we-need-more+h2 {
+  color: var(--narrow-black);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  width: 519px;
+  margin: 0 auto;
 }
 
 .reasons-list {
@@ -190,25 +212,6 @@ input[type="checkbox"].visually-hidden {
   font-weight: normal;
   margin: 0;
   margin-bottom: 23px;
-}
-
-.we-need-more {
-  width: 470px;
-  min-height: 80px;
-  margin: auto;
-  margin-bottom: 16px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.we-need-more+h2 {
-  color: var(--narrow-black);
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 26px;
-  margin: 0;
 }
 
 .reason {
@@ -433,6 +436,21 @@ input[type="checkbox"].visually-hidden {
   padding-left: 10px;
 }
 
+.date input[type="text"]::placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.date input[type="text"]::-moz-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.date input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
 .date input[type="text"]:hover {
   background-color: var(--hover-light-grey);
 }
@@ -447,6 +465,7 @@ input[type="checkbox"].visually-hidden {
   height: 23px;
   padding: 0;
   border: none;
+  background-color: transparent;
   position: absolute;
   top: 8px;
   right: 11px;
@@ -729,6 +748,7 @@ section.footer {
 
 .filter-container {
   background-image: url(../img/background_blurred.jpg);
+  background-size: cover;
   background-color: var(--basic-blue);
   width: 1200px;
   min-height: 217px;
@@ -741,9 +761,10 @@ section.footer {
 }
 
 .filter-container fieldset {
-  width: 255px;
+  width: 225px;
   padding: 0;
   margin: 0;
+  margin-right: 30px;
   border: none;
 }
 
@@ -906,10 +927,7 @@ section.footer {
 }
 
 .range-controls .toggle:hover {
-  width: 5px;
-  height: 5px;
-  border: 10px solid var(--basic-white);
-  box-shadow: 0 3px 0 0 var(--toggle-shadow-grey);
+  transform: scale(1.2);
 }
 
 .range-controls .toggle-max {
@@ -918,7 +936,7 @@ section.footer {
 
 .submit-button {
   width: 137px;
-  height: 36px;
+  min-height: 36px;
   color: inherit;
   font: inherit;
   text-transform: inherit;
@@ -927,6 +945,7 @@ section.footer {
   border-radius: 2px;
   cursor: pointer;
   align-self: center;
+  margin-right: 10px;
 }
 
 .submit-button:hover,
@@ -938,11 +957,13 @@ section.footer {
 .classification-container {
   border-bottom: 1px solid var(--border-grey);
   display: flex;
+  align-items: flex-start;
   width: 100%;
   min-height: 86px;
   padding-top: 27px;
   padding-left: 73px;
   padding-right: 72px;
+  padding-bottom: 20px;
 }
 
 div.found {
@@ -955,22 +976,23 @@ div.found {
 .picking {
   font-size: 12px;
   line-height: 18px;
-  padding-left: 47px;
-  padding-top: 4px;
+  margin-left: 47px;
   margin-right: 40px;
+  padding-top: 4px;
 }
 
 .sort-list {
+  width: 680px;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  width: 240px;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .sort-list li {
   display: inline;
+  margin-right: 33px;
 }
 
 .sort-item {
@@ -987,6 +1009,11 @@ div.found {
 
 .sort-item:active {
   color: var(--basic-black);
+  border: none;
+}
+
+.sort-item.current {
+  color: var(--basic-blue);
   border: none;
 }
 
@@ -1015,6 +1042,10 @@ div.arrows {
 
 .arrow.down svg {
   transform: rotate(180deg);
+}
+
+.arrows .current path{
+  fill: var(--basic-blue);
 }
 
 .hotels-list {
@@ -1071,11 +1102,11 @@ div.arrows {
   margin-bottom: 16px;
 }
 
-.hotels-list-item span {
+.hotel-info span {
   display: inline-block;
 }
 
-.hotels-list-item span:first-of-type {
+.hotel-info .hotel-type {
   width: 113px;
 }
 
@@ -1085,14 +1116,14 @@ div.arrows {
   color: var(--basic-white);
   text-align: center;
   display: inline-block;
-}
+  }
 
 .hotel-button.more {
   width: 110px;
-  height: 27px;
+  min-height: 27px;
   background-color: var(--basic-blue);
   margin-right: 3px;
-  padding-top: 4px;
+  padding: 3px;
 }
 
 .hotel-button.more:hover,
@@ -1108,9 +1139,10 @@ div.arrows {
 
 .hotel-button.book {
   width: 142px;
-  height: 27px;
-  padding-top: 4px;
+  min-height: 27px;
+  padding: 4px;
   background-color: var(--basic-brown);
+  padding: 3px;
 }
 
 .hotel-button.book:hover,
@@ -1125,7 +1157,6 @@ div.arrows {
 }
 
 .rating {
-  width: 110px;
   align-self: flex-end;
   position: relative;
   margin-left: auto;
@@ -1133,6 +1164,7 @@ div.arrows {
 
 .rating span {
   display: inline-block;
+  min-width: 110px;
   color: var(--rating-grey);
   background-color: var(--background-light-grey);
   font-size: inherit;
@@ -1140,7 +1172,7 @@ div.arrows {
   text-align: center;
 }
 
-.rating.amara::before {
+.rating.four-stars::before {
   content: "";
   position: absolute;
   bottom: 73px;
@@ -1148,10 +1180,10 @@ div.arrows {
   width: 89px;
   height: 18px;
   background-image: url(../img/star.svg);
-  background-repeat: repeat-x;
+  background-repeat: space;
 }
 
-.rating.desert::before {
+.rating.three-stars::before {
   content: "";
   position: absolute;
   bottom: 73px;
@@ -1159,10 +1191,10 @@ div.arrows {
   width: 64px;
   height: 18px;
   background-image: url(../img/star.svg);
-  background-repeat: repeat-x;
+  background-repeat: space;
 }
 
-.rating.villas::before {
+.rating.two-stars::before {
   content: "";
   position: absolute;
   bottom: 73px;
@@ -1170,7 +1202,7 @@ div.arrows {
   width: 41px;
   height: 18px;
   background-image: url(../img/star.svg);
-  background-repeat: repeat-x;
+  background-repeat: space;
 }
 
 
