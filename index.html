@@ -110,10 +110,10 @@
         </div>
         <div class="map">
           <div class="search-popup">
-            <form action="https://echo.htmlacademy.ru" method="get">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
               <div class="date">
                 <label for="arrival">Дата заезда:</label>
-                <input type="text" name="arrival-date" id="arrival" placeholder="24 апреля 2017" required>
+                <input class="visitor-arrival" type="text" name="arrival-date" id="arrival" placeholder="24 апреля 2017" required>
                 <button class="calendar" type="button" aria-label="открыть календарь">
                   <svg class="calendar-icon" width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -126,7 +126,7 @@
               </div>
               <div class="date">
                 <label for="departure">Дата выезда:</label>
-                <input type="text" name="departure-date" id="departure" placeholder="4 июля 2017" required>
+                <input class="visitor-departure" type="text" name="departure-date" id="departure" placeholder="4 июля 2017" required>
                 <button class="calendar" type="button" aria-label="открыть календарь">
                   <svg class="calendar-icon" width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -141,13 +141,13 @@
                 <div class="quantity adults">
                   <label for="adults-num">Взрослые:</label>
                   <button class="minus" type="button" aria-label="уменьшить"></button>
-                  <input type="text" name="adults" id="adults-num" min="1" value="2" pattern="[1-9]" required>
+                  <input class="adults-num-input" type="text" name="adults" id="adults-num" min="1" placeholder="2" pattern="[1-9]" required>
                   <button class="plus" type="button" aria-label="увеличить"></button>
                 </div>
                 <div class="quantity kids">
                   <label for="kids-num">Дети:</label>
                   <button class="minus" type="button" aria-label="уменьшить"></button>
-                  <input type="text" name="kids" id="kids-num" min="0" value="0" pattern="[0-9]">
+                  <input class="kids-num-input" type="text" name="kids" id="kids-num" min="0" placeholder="0" pattern="[0-9]">
                   <button class="plus" type="button" aria-label="увеличить"></button>
                 </div>
               </div>

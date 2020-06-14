@@ -509,6 +509,21 @@ div.quantity {
   text-align: left;
 }
 
+.quantity input[type="text"]::placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.quantity input[type="text"]::-moz-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.quantity input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
 .quantity.adults label {
   width: 115px;
   padding-left: 2px;
