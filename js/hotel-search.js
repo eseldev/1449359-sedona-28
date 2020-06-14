@@ -22,7 +22,8 @@ searchButton.addEventListener("click", function (evt) {
     searchPopup.classList.toggle("search-popup-hide");
     if (storage) {
         adultsInput.value = storage;
-        kidsInput.value = storage;J
+    } else {
+        kidsInput.value = storage;
       }
     arrivalInput.focus();
 });
