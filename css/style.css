@@ -283,7 +283,7 @@ input[type="checkbox"].visually-hidden {
   width: 400px;
   min-height: 330px;
   margin: 0;
-  padding: 160px 50px 10px;
+  padding: 158px 50px 10px;
 }
 
 .hint-item.house {
@@ -317,7 +317,7 @@ input[type="checkbox"].visually-hidden {
 
 .reason-bottom {
   background-color: var(--reasons-grey);
-  padding: 48px 60px 10px;
+  padding: 46px 60px 10px;
   margin: 0;
   width: 400px;
   min-height: 256px;
@@ -346,15 +346,14 @@ input[type="checkbox"].visually-hidden {
 .search-header {
   width: 100%;
   min-height: 291px;
-  padding-top: 56px;
+  padding-top: 55px;
 }
 
 .interested {
   font-size: 30px;
   line-height: 24px;
   font-weight: bold;
-  margin: 0;
-  margin-bottom: 31px;
+  margin: 0 73px 31px 73px;
 }
 
 .interested+p {
@@ -503,7 +502,7 @@ input[type="checkbox"].visually-hidden {
 
 div.quantity-wrapper {
   display: flex;
-  margin-bottom: 55px;
+  margin-bottom: 56px;
   justify-content: space-between;
 }
 
@@ -676,8 +675,8 @@ section.footer {
   font-size: 21px;
   font-weight: bold;
   align-items: stretch;
-  padding-left: 72px;
-  padding-top: 23px;
+  padding-left: 73px;
+  padding-top: 21px;
   text-align: center;
 }
 
