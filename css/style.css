@@ -1092,6 +1092,7 @@ div.arrows {
 .hotels-list {
   list-style: none;
   margin: 0;
+  margin-bottom: 3px;
   padding: 0;
 }
 

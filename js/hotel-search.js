@@ -38,3 +38,31 @@ searchForm.addEventListener("submit", function (evt) {
         }
     }
 });
+
+var quantityAdults = document.querySelector(".quantity.adults");
+var inputAdults = document.querySelector(".adults-num-input").value;
+var elemAdults = document.querySelector(".adults-num-input");
+
+quantityAdults.addEventListener("click", function (event) {
+    var target = event.target;
+    var minusAdults = target.classList.contains("js-adults-minus");
+    var plusAdults = target.classList.contains("js-adults-plus");
+
+    if (minusAdults && inputAdults >= 1) { --inputAdults; elemAdults.value = inputAdults; }
+    if (plusAdults) { ++inputAdults; elemAdults.value = inputAdults; }
+
+}, false);
+
+var quantityKids = document.querySelector(".quantity.kids");
+var inputKids = document.querySelector(".kids-num-input").value;
+var elemKids = document.querySelector(".kids-num-input");
+
+quantityKids.addEventListener("click", function (event) {
+    var target = event.target;
+    var minusKids = target.classList.contains("js-kids-minus");
+    var plusKids = target.classList.contains("js-kids-plus");
+
+    if (minusKids && inputKids >= 1) { --inputKids; elemKids.value = inputKids; }
+    if (plusKids) { ++inputKids; elemKids.value = inputKids; }
+
+}, false);
