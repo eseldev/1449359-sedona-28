@@ -106,7 +106,6 @@ input[type="checkbox"].visually-hidden {
   background: url(../img/shape.svg) no-repeat 0 100%, url("../img/background.jpg");
   background-color: var(--html-grey);
   position: relative;
-  z-index: 1;
   padding-top: 76px;
 }
 
