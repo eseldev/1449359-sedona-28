@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 :root {
   --basic-white: #FFFFFF;
   --basic-black: #000000;
@@ -68,7 +75,8 @@ input[type="checkbox"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -161,6 +169,8 @@ input[type="checkbox"].visually-hidden {
 
 .advantages {
   text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
 .advantages-header {
@@ -248,6 +258,7 @@ input[type="checkbox"].visually-hidden {
 .city-view {
   width: 800px;
   min-height: 256px;
+  background-color: var(--basic-blue);
 }
 
 .city-view img {
@@ -257,6 +268,7 @@ input[type="checkbox"].visually-hidden {
 .bridge {
   width: 800px;
   min-height: 256px;
+  background-color: var(--basic-blue);
 }
 
 .bridge img {
@@ -283,7 +295,7 @@ input[type="checkbox"].visually-hidden {
   width: 400px;
   min-height: 330px;
   margin: 0;
-  padding: 158px 50px 10px;
+  padding: 158px 50px 30px;
 }
 
 .hint-item.house {
@@ -317,7 +329,7 @@ input[type="checkbox"].visually-hidden {
 
 .reason-bottom {
   background-color: var(--reasons-grey);
-  padding: 46px 60px 10px;
+  padding: 46px 60px 30px;
   margin: 0;
   width: 400px;
   min-height: 256px;
@@ -347,6 +359,9 @@ input[type="checkbox"].visually-hidden {
   width: 100%;
   min-height: 291px;
   padding-top: 55px;
+  position: relative;
+  z-index: 5;
+  background-color: var(--basic-white);
 }
 
 .interested {
@@ -410,7 +425,8 @@ input[type="checkbox"].visually-hidden {
   left: 316px;
   margin: auto;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-  animation: slideDown 2s ease;
+  -webkit-animation: slideDown 2s ease;
+          animation: slideDown 2s ease;
   z-index: 3;
 }
 
@@ -419,7 +435,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .search-popup-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .search-popup form {
@@ -451,7 +468,7 @@ input[type="checkbox"].visually-hidden {
   padding-right: 40px;
 }
 
-.date input[type="text"]::placeholder {
+.date input[type="text"]::-webkit-input-placeholder {
   color: var(--basic-black);
   opacity: 1;
 }
@@ -461,7 +478,7 @@ input[type="checkbox"].visually-hidden {
   opacity: 1;
 }
 
-.date input[type="text"]::-webkit-input-placeholder {
+.date input[type="text"]::placeholder {
   color: var(--basic-black);
   opacity: 1;
 }
@@ -491,12 +508,12 @@ input[type="checkbox"].visually-hidden {
   display: inline;
 }
 
-.calendar:hover .calendar-icon path,
-.calendar:focus .calendar-icon path {
+.calendar:hover path,
+.calendar:focus path {
   fill: var(--basic-black);
 }
 
-.calendar:active .calendar-icon path {
+.calendar:active path {
   fill: var(--basic-blue);
 }
 
@@ -512,17 +529,17 @@ div.quantity {
   text-align: left;
 }
 
-.quantity input[type="text"]::placeholder {
-  color: var(--basic-black);
-  opacity: 1;
-}
-
 .quantity input[type="text"]::-moz-placeholder {
   color: var(--basic-black);
   opacity: 1;
 }
 
 .quantity input[type="text"]::-webkit-input-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.quantity input[type="text"]::placeholder {
   color: var(--basic-black);
   opacity: 1;
 }
@@ -710,6 +727,7 @@ section.footer {
   width: 46px;
   height: 48px;
   display: inline-block;
+  vertical-align: top;
   position: relative
 }
 
@@ -766,7 +784,7 @@ section.footer {
   margin-right: 6px;
 }
 
-.footer.logo :last-child {
+.academy-icon {
   width: 114px;
   height: 40px;
   margin: 0;
@@ -774,12 +792,12 @@ section.footer {
   vertical-align: middle;
 }
 
-.footer.logo :last-child:hover .academy-icon path,
-.footer.logo :last-child:focus .academy-icon path {
+.academy-icon:hover path,
+.academy-icon:focus path {
   fill: var(--basic-blue);
 }
 
-.footer.logo :last-child:active .academy-icon path {
+.academy-icon:active path {
   fill: var(--html-grey);
 }
 
@@ -830,7 +848,9 @@ section.footer {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .filter-checkbox+label::before {
@@ -842,6 +862,12 @@ section.footer {
   height: 23px;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+}
+
+.filter-checkbox:focus+label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .filter-checkbox:disabled+label::before {
@@ -864,6 +890,12 @@ section.footer {
   background-image: url(../img/checkbox-on.svg);
   width: 27px;
   height: 23px;
+}
+
+.filter-checkbox:checked:focus+label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .filter-checkbox:checked:disabled+label::before {
@@ -911,6 +943,7 @@ section.footer {
 
 .price-range-display input {
   display: inline-block;
+  vertical-align: baseline;
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -1085,7 +1118,7 @@ div.arrows {
   transform: rotate(180deg);
 }
 
-.arrows .current path {
+.arrow.current path {
   fill: var(--basic-blue);
 }
 
@@ -1147,6 +1180,7 @@ div.arrows {
 
 .hotel-info span {
   display: inline-block;
+  vertical-align: top;
 }
 
 .hotel-info .hotel-type {
@@ -1159,6 +1193,7 @@ div.arrows {
   color: var(--basic-white);
   text-align: center;
   display: inline-block;
+  vertical-align: top;
 }
 
 .hotel-button.more {
@@ -1207,6 +1242,7 @@ div.arrows {
 
 .rating span {
   display: inline-block;
+  vertical-align: top;
   min-width: 110px;
   color: var(--rating-grey);
   background-color: var(--background-light-grey);
@@ -1267,6 +1303,7 @@ div.arrows {
 
 .blank-page a {
   display: inline-block;
+  vertical-align: top;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -1290,29 +1327,46 @@ div.arrows {
   mix-blend-mode: normal;
 }
 
-@keyframes slideDown {
+@-webkit-keyframes slideDown {
   0% {
-    transform: translateY(0%);
-  }
-
-  50% {
-    transform: translateY(8%);
-  }
-
-  65% {
-    transform: translateY(-4%);
-  }
-
-  80% {
-    transform: translateY(4%);
-  }
-
-  95% {
-    transform: translateY(-2%);
+    transform: translateY(-100%);
   }
 
   100% {
     transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -1338,4 +1392,3 @@ div.arrows {
     transform: translateX(10px);
   }
 }
-

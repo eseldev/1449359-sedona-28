@@ -14,7 +14,9 @@ var storage2 = "";
 try {
     storage1 = localStorage.getItem("adults");
     storage2 = localStorage.getItem("kids");
-} catch (err) {
+}
+
+catch (err) {
     isStorageSupport = false;
 }
 
@@ -22,7 +24,6 @@ searchButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     searchPopup.classList.toggle("search-popup-hide");
     searchPopup.classList.remove("search-popup-error");
-    arrivalInput.focus();
 });
 
 searchForm.addEventListener("submit", function (evt) {
@@ -31,11 +32,13 @@ searchForm.addEventListener("submit", function (evt) {
         searchPopup.classList.remove("search-popup-error");
         searchPopup.offsetWidth = searchPopup.offsetWidth;
         searchPopup.classList.add("search-popup-error");
-    } else {
-        if (isStorageSupport) {
+}
+
+else {
+    if (isStorageSupport) {
             localStorage.setItem("adults", adultsInput.value);
             localStorage.setItem("kids", kidsInput.value);
-        }
+}
     }
 });
 
@@ -48,10 +51,14 @@ quantityAdults.addEventListener("click", function (event) {
     var minusAdults = target.classList.contains("js-adults-minus");
     var plusAdults = target.classList.contains("js-adults-plus");
 
-    if (minusAdults && inputAdults >= 1) { --inputAdults; elemAdults.value = inputAdults; }
-    if (plusAdults) { ++inputAdults; elemAdults.value = inputAdults; }
+    if (minusAdults && inputAdults >= 1) { --inputAdults; elemAdults.value = inputAdults;
+}
 
-}, false);
+if (plusAdults) {
+    ++inputAdults; elemAdults.value = inputAdults;
+}
+
+},false);
 
 var quantityKids = document.querySelector(".quantity.kids");
 var inputKids = document.querySelector(".kids-num-input").value;
@@ -62,7 +69,11 @@ quantityKids.addEventListener("click", function (event) {
     var minusKids = target.classList.contains("js-kids-minus");
     var plusKids = target.classList.contains("js-kids-plus");
 
-    if (minusKids && inputKids >= 1) { --inputKids; elemKids.value = inputKids; }
-    if (plusKids) { ++inputKids; elemKids.value = inputKids; }
+    if (minusKids && inputKids >= 1) { --inputKids; elemKids.value = inputKids;
+}
 
-}, false);
+if (plusKids) {
+    ++inputKids; elemKids.value = inputKids;
+}
+
+},false);
