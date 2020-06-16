@@ -88,6 +88,9 @@ input[type="checkbox"].visually-hidden {
 .container {
   width: 1200px;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   margin: 0 auto;
   background-color: var(--basic-white);
   box-shadow: 0px 5px 15px var(--opacity-body);
@@ -490,6 +493,7 @@ input[type="checkbox"].visually-hidden {
 .date input[type="text"]:focus {
   background-color: transparent;
   border: 2px solid var(--border-grey);
+  outline: none;
 }
 
 .calendar {
@@ -601,7 +605,7 @@ button.plus {
   position: absolute;
   top: 18px;
   left: 11px;
-  width: 12px;
+  width: 13px;
   height: 3px;
   background-color: var(--icon-grey);
 }
@@ -611,7 +615,7 @@ button.plus {
   position: absolute;
   top: 18px;
   left: 11px;
-  width: 12px;
+  width: 13px;
   height: 3px;
   background-color: var(--icon-grey);
   transform: rotate(90deg);
@@ -658,6 +662,7 @@ button.plus {
   top: 0;
   left: 0;
   z-index: 1;
+  border: none;
 }
 
 .main-footer {
@@ -683,7 +688,8 @@ section.footer {
   width: 400px;
   min-height: 120px;
   justify-content: center;
-  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 20px;
 }
 
 .contacts {
@@ -692,8 +698,7 @@ section.footer {
   font-size: 21px;
   font-weight: bold;
   align-items: stretch;
-  padding-left: 73px;
-  padding-top: 21px;
+  padding: 21px 0 20px 73px;
   text-align: center;
 }
 
@@ -778,10 +783,8 @@ section.footer {
 }
 
 .footer.logo p:first-of-type {
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle;
   margin-right: 6px;
+  margin-top: 11px;
 }
 
 .academy-icon {
@@ -806,7 +809,7 @@ section.footer {
 
 
 .filter-container {
-  background-image: url(../img/background_blurred.jpg);
+  background-image: url(../img/background-blurred.jpg);
   background-size: cover;
   background-color: var(--basic-blue);
   width: 1200px;
@@ -1040,7 +1043,7 @@ section.footer {
   padding-bottom: 20px;
 }
 
-div.found {
+.found {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
